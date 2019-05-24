@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+
+* {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+h1 {
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
+}
+h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 1.5px;
+}
+p, .section__texto {
+  font-size: 30px;
+  text-align: justify;
+
+  margin:;
+  width: 100%;
+}
+.contenedor {
+  margin: auto;
+  width: 99%;
+}
+
+/*-------------header---------------*/
+
+header {
+  height: 40px;
+}
+.header .contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+.logo, .icon-menu {
+  margin: 5px;
+  color: #fff;
+}
+.icon-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: #f5b041;
+  text-align: center;
+  line height: 40px;
+  border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.nav {
+  position: absolute;
+  top: 100px;
+  left: -100%;
+  width: 100%;
+  transition: all 0.4s;
+}
+.nav li ul{
+  display: none;
+  position:absolute;
+  min-width:140px;
+}
+.nav li:hover > ul {
+  display: block;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu__link {
+  display: block;
+  padding: 15px;
+  background: #c0c0c0;
+  text-decoration: none;
+  color: #fff;
+}
+.menu__link:hover, .select {
+  background: #f5b041;
+  color: white;
+}
+.mostrar {
+  left: 0;
+}
+
+/*---------------principal-------------*/
+
+.principal {
+  margin-top: -70px;
+  position: relative;
+  z-index: -1000;
+}
+.principal__img {
+  margin-bottom: 10px;
+}
+/*------------------------anuncios---------------------------*/
+
+.anuncios__columna, .ofertas__columna, .tienda__columna {
+  padding: 0px;
+  position: relative;
+  margin-bottom: 10px;
+  width: 48%;
+}
+.tienda__columna {
+  width: 48%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+/*------------------------marcas---------------------------*/
+
+
+/*------------------------pie---------------------------*/
+
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.footer .social [class^="icon-"]{
+  color: #fff;
+  text-decoration: none;
+  font-size: 40px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/*------------------------responsive-------------------*/
+
+@media(min-width:480px) {
+  .logo {
+    font-size: 30px;
+  }
+  .anuncios, .marcas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .marcas {
+    margin-top: 0;
+  }
+  .section__titulo {
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+    color: #f5b041;
+  }
+
+  .marcas__columna {
+    width: 25%;
+  }
+  .ofertas__columna {
+    width: 48%;
+  }
+  .footer .social [class^="icon-"]{
+    margin: 0 10px;
+  }
+}
+
+
+@media(min-width:1024px) {
+  .contenedor {
+    width: 1000px;
+  }
+  .section__titulo {
+    margin: 70px;
+  }
+  .section__texto {
+    margin: 70px;
+  }
+  .nav {
+    position: static;
+    width: auto;
+  }
+  .icon-menu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu__link {
+    background: none;
+    font-size: 17px;
+  }
+  .select {
+    background: #f5b041;
+  }
+  .marcas {
+    margin: 50px;
+  }
+  .anuncios, .marcas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media(min-width:1280px) {
+.contenedor {
+  width: 1200px;
+}
+.logo {
+  font-size: 50px;
+}
+}
